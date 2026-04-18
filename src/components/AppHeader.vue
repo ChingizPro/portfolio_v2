@@ -68,11 +68,12 @@ const closeMenu = () => {
 }
 
 .header__logo {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.5px;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .header__logo:hover {
@@ -186,13 +187,19 @@ const closeMenu = () => {
     justify-content: center;
     align-items: flex-start;
     padding: var(--spacing-xxl);
-    transition: right var(--transition-base);
+    transition: right var(--transition-base), visibility var(--transition-base), opacity var(--transition-base);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
     border-left: 1px solid var(--color-border);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .header__nav--open {
     right: 0;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
   }
 
   .header__nav-list {
