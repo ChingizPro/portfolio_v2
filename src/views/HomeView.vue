@@ -110,7 +110,6 @@ const techSkills = [
 .hero__title {
   font-size: clamp(2rem, 10vw, 4.5rem);
   font-weight: 800;
-  line-height: 1;
   letter-spacing: -1.5px;
   margin-bottom: var(--spacing-lg);
   color: var(--color-text);
@@ -119,6 +118,7 @@ const techSkills = [
 
 .hero__name {
   color: var(--color-text);
+  display: inline-block;
 }
 
 .hero__dot {
